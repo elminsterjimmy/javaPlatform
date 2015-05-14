@@ -17,36 +17,74 @@
         <scope>test</scope>
       </dependency>
       <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-test</artifactId>
+        <version>${spring.version}</version>
+        <scope>test</scope>
+      </dependency>
+      <dependency>
         <groupId>org.testng</groupId>
         <artifactId>testng</artifactId>
         <version>6.8.8</version>
         <scope>test</scope>
       </dependency>
       <dependency>
+        <groupId>org.hamcrest</groupId>
+        <artifactId>hamcrest-core</artifactId>
+        <version>${hamcrest.core.version}</version>
+        <scope>test</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.mockito</groupId>
+        <artifactId>mockito-core</artifactId>
+        <version>${mockito.core.version}</version>
+        <scope>test</scope>
+      </dependency>
+      <dependency>
+        <groupId>com.fasterxml.jackson.core</groupId>
+        <artifactId>jackson-databind</artifactId>
+        <version>${jackson2.version}</version>
+        <scope>test</scope>
+      </dependency>
+      <dependency>
+        <groupId>com.jayway.jsonpath</groupId>
+        <artifactId>json-path</artifactId>
+        <version>${jsonpath.version}</version>
+        <scope>test</scope>
+      </dependency>
+      <dependency>
+        <groupId>com.thoughtworks.xstream</groupId>
+        <artifactId>xstream</artifactId>
+        <version>${xstream.version}</version>
+        <scope>test</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-oxm</artifactId>
+        <version>${spring.version}</version>
+        <scope>test</scope>
+      </dependency>
+
+      <!-- database drivers -->
+      <dependency>
         <groupId>mysql</groupId>
         <artifactId>mysql-connector-java</artifactId>
         <version>5.1.34</version>
         <scope>runtime</scope>
       </dependency>
+
+      <!-- logging -->
       <dependency>
         <groupId>log4j</groupId>
         <artifactId>log4j</artifactId>
         <version>1.2.14</version>
       </dependency>
-      <dependency>
-        <groupId>commons-logging</groupId>
-        <artifactId>commons-logging</artifactId>
-        <version>1.2</version>
-      </dependency>
+
+      <!-- javax -->
       <dependency>
         <groupId>javax.mail</groupId>
         <artifactId>mail</artifactId>
         <version>1.4</version>
-      </dependency>
-      <dependency>
-        <groupId>org.apache.velocity</groupId>
-        <artifactId>velocity</artifactId>
-        <version>1.7</version>
       </dependency>
       <dependency>
         <groupId>javax.servlet</groupId>
@@ -60,7 +98,56 @@
         <version>2.2</version>
         <scope>provided</scope>
       </dependency>
-      
+
+      <!-- apache commons -->
+      <dependency>
+        <groupId>commons-logging</groupId>
+        <artifactId>commons-logging</artifactId>
+        <version>1.2</version>
+      </dependency>
+      <dependency>
+        <groupId>commons-dbcp</groupId>
+        <artifactId>commons-dbcp</artifactId>
+        <version>1.4</version>
+      </dependency>
+      <dependency>
+        <groupId>commons-pool</groupId>
+        <artifactId>commons-pool</artifactId>
+        <version>1.6</version>
+      </dependency>
+      <dependency>
+        <groupId>commons-collections</groupId>
+        <artifactId>commons-collections</artifactId>
+        <version>3.2.1</version>
+      </dependency>
+      <dependency>
+        <groupId>commons-io</groupId>
+        <artifactId>commons-io</artifactId>
+        <version>2.4</version>
+      </dependency>
+      <dependency>
+        <groupId>commons-codec</groupId>
+        <artifactId>commons-codec</artifactId>
+        <version>1.10</version>
+      </dependency>
+      <dependency>
+        <groupId>commons-lang</groupId>
+        <artifactId>commons-lang</artifactId>
+        <version>2.6</version>
+      </dependency>
+      <dependency>
+        <groupId>commons-beanutils</groupId>
+        <artifactId>commons-beanutils</artifactId>
+        <version>1.9.2</version>
+      </dependency>
+
+      <!-- apache others -->
+      <dependency>
+        <groupId>org.apache.velocity</groupId>
+        <artifactId>velocity</artifactId>
+        <version>1.7</version>
+      </dependency>
+
       <!-- maven plugin -->
       <dependency>
         <groupId>org.apache.maven</groupId>
@@ -114,6 +201,21 @@
         <artifactId>spring-webmvc</artifactId>
         <version>${spring.version}</version>
       </dependency>
+      <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-context-support</artifactId>
+        <version>${spring.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.springframework.data</groupId>
+        <artifactId>spring-data-jpa</artifactId>
+        <version>${spring.data.jpa.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.springframework.data</groupId>
+        <artifactId>spring-data-mongodb</artifactId>
+        <version>${spring.data.mongo.version}</version>
+      </dependency>
 
       <!-- hibernate -->
       <dependency>
@@ -121,12 +223,68 @@
         <artifactId>hibernate-core</artifactId>
         <version>${hibernate.version}</version>
       </dependency>
+      <dependency>
+        <groupId>org.hibernate</groupId>
+        <artifactId>hibernate-entitymanager</artifactId>
+        <version>${hibernate.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.hibernate</groupId>
+        <artifactId>hibernate-jpamodelgen</artifactId>
+        <version>${hibernate.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.hibernate</groupId>
+        <artifactId>hibernate-commons-annotations</artifactId>
+        <version>${hibernate.annotations.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.hibernate</groupId>
+        <artifactId>hibernate-validator</artifactId>
+        <version>${hibernate.validator.version}</version>
+      </dependency>
+
+
+      <!-- google -->
+      <dependency>
+        <groupId>com.google.code.simple-spring-memcached</groupId>
+        <artifactId>simple-spring-memcached</artifactId>
+        <version>${simple.spring.memcached.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.google.code.simple-spring-memcached</groupId>
+        <artifactId>xmemcached-provider</artifactId>
+        <version>${simple.spring.memcached.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.google.code.simple-spring-memcached</groupId>
+        <artifactId>spring-cache</artifactId>
+        <version>${simple.spring.memcached.version}</version>
+      </dependency>
+
+      <!-- json -->
+      <dependency>
+        <groupId>org.codehaus.jackson</groupId>
+        <artifactId>jackson-mapper-asl</artifactId>
+        <version>${jackson.version}</version>
+      </dependency>
     </dependencies>
   </dependencyManagement>
   <groupId>com.elminster</groupId>
   <version>1.0.0</version>
   <properties>
     <spring.version>4.1.4.RELEASE</spring.version>
+    <spring.data.jpa.version>1.7.2.RELEASE</spring.data.jpa.version>
+    <spring.data.mongo.version>1.6.1.RELEASE</spring.data.mongo.version>
     <hibernate.version>4.3.5.Final</hibernate.version>
+    <hibernate.validator.version>5.1.3.Final</hibernate.validator.version>
+    <hibernate.annotations.version>3.3.0.ga</hibernate.annotations.version>
+    <simple.spring.memcached.version>3.5.0</simple.spring.memcached.version>
+    <jackson.version>1.9.13</jackson.version>
+    <hamcrest.core.version>1.3</hamcrest.core.version>
+    <mockito.core.version>1.9.5</mockito.core.version>
+    <jsonpath.version>0.9.0</jsonpath.version>
+    <jackson2.version>2.2.3</jackson2.version>
+    <xstream.version>1.4.4</xstream.version>
   </properties>
 </project>
