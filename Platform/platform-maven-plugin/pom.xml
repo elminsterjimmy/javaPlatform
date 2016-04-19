@@ -5,6 +5,7 @@
     <artifactId>base-pom</artifactId>
     <groupId>com.elminster</groupId>
     <version>1.0.0</version>
+    <relativePath>../platform-base/pom.xml</relativePath>
   </parent>
 
   <modelVersion>4.0.0</modelVersion>

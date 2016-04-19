@@ -5,6 +5,7 @@
     <artifactId>root-pom</artifactId>
     <groupId>com.elminster</groupId>
     <version>1.0.0</version>
+    <relativePath>../platform-root/pom.xml</relativePath>
   </parent>
 
   <modelVersion>4.0.0</modelVersion>
@@ -225,4 +226,11 @@
       </dependency>
     </dependencies>
   </dependencyManagement>
+  
+  <repositories>
+    <repository>
+      <id>my-alternate-repository</id>
+      <url>http://myrepo.net/repo</url>
+    </repository>
+  </repositories>
 </project>
