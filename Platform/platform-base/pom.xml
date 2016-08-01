@@ -226,11 +226,4 @@
       </dependency>
     </dependencies>
   </dependencyManagement>
-  
-  <repositories>
-    <repository>
-      <id>my-alternate-repository</id>
-      <url>http://myrepo.net/repo</url>
-    </repository>
-  </repositories>
 </project>
